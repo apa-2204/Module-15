@@ -19,11 +19,26 @@ To write a Python program to build a heap tree using appropriate Python package 
 ## PROGRAM:
 
 ```
-WRITE YOUR CODE
+Name : Prince Andrew A
+Reg No : 212223060210
+from binarytree import heap,build,Node
+def min_max_heap(L): 
+    x=L
+    t=build(x)
+    for i in (t.values):
+        print(i,"-->",end='')
+    if (t.is_complete):
+        print("\nComplete binary tree")
+        if (t.is_max_heap):
+            print("\nMax heap tree")
+        else:
+            print("\nMin heap tree")
+    else:
+        print("\nNot a Complete binary tree")
 ```
 
 ## OUTPUT
-```
-```
+<img width="1126" height="288" alt="image" src="https://github.com/user-attachments/assets/bd0cd462-d6e1-4706-829d-0102cc80e50a" />
 
 ## RESULT
+Thus ,a Python program to build a heap tree using appropriate Python package and function is successfully executed.
