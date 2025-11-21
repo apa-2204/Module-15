@@ -22,11 +22,42 @@ To write a Python program to build a binary search tree using a built-in functio
 ## PROGRAM:
 
 ```
-ENTER YOUR CODE
+Name : Prince Andrew A
+Reg No : 212223060210
+
+from binarytree import Node
+def _build_bst_from_sorted_values(sorted_values):
+    
+    if len(sorted_values) == 0:
+        return None
+    mid_index = len(sorted_values) // 2
+    root = Node(sorted_values[mid_index])
+    root.left = _build_bst_from_sorted_values(sorted_values[:mid_index])
+    root.right = _build_bst_from_sorted_values(sorted_values[mid_index + 1 :])  
+    return (root)
+
+def right_subtree(l):
+  print("Right Subtree : ")
+  for i in l[2].values:
+    print(i,"-->",end="")
+  return 
+
+a=[]
+size=int(input())
+for i in range(0,size):
+  val=int(input())
+  a.append(val)
+x=sorted(a)
+
+
+l=_build_bst_from_sorted_values(x)
+print("Postorder :",l.postorder)
+right_subtree(l)
+print("\nIs this a Binary Search Tree? ",l.is_bst)
 ```
 
 ## OUTPUT
-```
-```
+<img width="1137" height="538" alt="image" src="https://github.com/user-attachments/assets/5b919bf1-b813-4edc-9f86-b12b2fd5d648" />
 
 ## RESULT
+Thus, the Python program to build a binary search tree using a built-in function is implemented and executed successfully.
